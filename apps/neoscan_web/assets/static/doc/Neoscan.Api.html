@@ -15,7 +15,7 @@
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
-    <div class="main">
+    <div class="test">
 <button class="sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
   <span class="sr-only">Toggle Sidebar</span>
@@ -70,9 +70,9 @@
 
 
         <section id="moduledoc">
-          <p>  Main API for accessing data from the explorer.
-  All data is provided through GET requests in <code class="inline">/api/main_net/v1</code>.
-  Testnet isn’t currently available.</p>
+          <p>  test API for accessing data from the explorer.
+  All data is provided through GET requests in <code class="inline">/api/test_net/v1</code>.
+  </p>
 
         </section>
 
@@ -335,7 +335,7 @@ from its hash_string, paginated</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_address/{hash_string}
 {
   &quot;txids&quot;: [
     {
@@ -397,7 +397,7 @@ from its hash_string, paginated</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address_abstracts/{hash_string}/{page}
+<pre><code class="elixir">/api/test_net/v1/get_address_abstracts/{hash_string}/{page}
 [
   {
     &quot;address_from&quot;: &quot;hash_string&quot;,
@@ -433,7 +433,7 @@ from its hash_string, paginated</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address_neon/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_address_neon/{hash_string}
 {
   &quot;txids&quot;: [
     {
@@ -495,7 +495,7 @@ from its hash_string, paginated</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_address_to_address_abstracts/{hash_string}/{hash_string}/{page}
+<pre><code class="elixir">/api/test_net/v1/get_address_to_address_abstracts/{hash_string}/{hash_string}/{page}
 [
   {
     &quot;address_from&quot;: &quot;hash_string&quot;,
@@ -528,50 +528,25 @@ from its hash_string, paginated</p>
     <p>Returns all working nodes and their respective heights.
 Information is updated each minute.</p>
 <p>Currrent tested nodes are:</p>
-<p>“http://seed1.cityofzion.io:8080”,
-“http://seed2.cityofzion.io:8080”,
-“http://seed3.cityofzion.io:8080”,
-“http://seed4.cityofzion.io:8080”,
-“http://seed5.cityofzion.io:8080”,
-“http://api.otcgo.cn:10332”,
-“https://seed1.neo.org:10331”,
-“http://seed2.neo.org:10332”,
-“http://seed3.neo.org:10332”,
-“http://seed4.neo.org:10332”,
-“http://seed5.neo.org:10332”,
-“http://seed0.bridgeprotocol.io:10332”,
-“http://seed1.bridgeprotocol.io:10332”,
-“http://seed2.bridgeprotocol.io:10332”,
-“http://seed3.bridgeprotocol.io:10332”,
-“http://seed4.bridgeprotocol.io:10332”,
-“http://seed5.bridgeprotocol.io:10332”,
-“http://seed6.bridgeprotocol.io:10332”,
-“http://seed7.bridgeprotocol.io:10332”,
-“http://seed8.bridgeprotocol.io:10332”,
-“http://seed9.bridgeprotocol.io:10332”,
-“http://seed1.redpulse.com:10332”,
-“http://seed2.redpulse.com:10332”,
-“https://seed1.redpulse.com:10331”,
-“https://seed2.redpulse.com:10331”,
-“http://seed1.treatail.com:10332”,
-“http://seed2.treatail.com:10332”,
-“http://seed3.treatail.com:10332”,
-“http://seed4.treatail.com:10332”,
-“http://seed1.o3node.org:10332”,
-“http://seed2.o3node.org:10332”,
-“http://54.66.154.140:10332”,
-“http://seed1.eu-central-1.fiatpeg.com:10332”,
-“http://seed1.eu-west-2.fiatpeg.com:10332”,
-“http://seed1.aphelion.org:10332”,
-“http://seed2.aphelion.org:10332”,
-“http://seed3.aphelion.org:10332”,
-“http://seed4.aphelion.org:10332”,</p>
+<p>
+  "http://test1.cityofzion.io:8880",
+  "http://test2.cityofzion.io:8880",
+  "http://test3.cityofzion.io:8880",
+  "http://test4.cityofzion.io:8880",
+  "http://test5.cityofzion.io:8880",
+  "http://api.otcgo.cn:20332",
+  "https://seed1.neo.org:20331",
+  "http://seed2.neo.org:20332",
+  "http://seed3.neo.org:20332",
+  "http://seed4.neo.org:20332",
+  "http://seed5.neo.org:20332",
+</p>
 <h2 id="get_all_nodes/0-examples" class="section-heading">
   <a href="#get_all_nodes/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_all_nodes
+<pre><code class="elixir">/api/test_net/v1/get_all_nodes
       [
         {
           &quot;url&quot;: &quot;http://seed1.cityofzion.io:8080&quot;,
@@ -602,7 +577,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_asset/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_asset/{hash_string}
 {
   &quot;type&quot;: &quot;type_string&quot;,
   &quot;txid&quot;: &quot;tx_id_string&quot;,
@@ -642,7 +617,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_assets
+<pre><code class="elixir">/api/test_net/v1/get_assets
 [
   {
     &quot;type&quot;: &quot;type_string&quot;,
@@ -685,7 +660,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_balance/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_balance/{hash_string}
 {
   &quot;balance&quot;: [
     {
@@ -727,8 +702,8 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_block/{hash_string}
-/api/main_net/v1/get_block/{height}
+<pre><code class="elixir">/api/test_net/v1/get_block/{hash_string}
+/api/test_net/v1/get_block/{height}
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -774,7 +749,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_claimable/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_claimable/{hash_string}
 {
   &quot;unclaimed&quot;: float,
   &quot;claimable&quot;: [
@@ -813,7 +788,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_claimed/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_claimed/{hash_string}
 {
   &quot;claimed&quot;: [
     {
@@ -853,7 +828,7 @@ Information is updated each minute.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_fees_in_range/500-1000
+<pre><code class="elixir">/api/test_net/v1/get_fees_in_range/500-1000
 {
   &quot;total_sys_fee&quot;: 0,
   &quot;total_net_fee&quot;: 0
@@ -882,7 +857,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_height
+<pre><code class="elixir">/api/test_net/v1/get_height
 {
   &quot;height&quot;: 1239809
 }</code></pre>
@@ -909,7 +884,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_highest_block
+<pre><code class="elixir">/api/test_net/v1/get_highest_block
 {
   &quot;version&quot;: integer,
   &quot;tx_count&quot;: integer,
@@ -955,7 +930,7 @@ working nodes.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_blocks</code></pre>
+<pre><code class="elixir">/api/test_net/v1/get_last_blocks</code></pre>
 <p>   [</p>
 <pre><code class="elixir">  {
     &quot;version&quot;: integer,
@@ -1005,8 +980,8 @@ If no <code class="inline">type</code> is provided, returns all types</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_transactions/{type}
-/api/main_net/v1/get_last_transactions
+<pre><code class="elixir">/api/test_net/v1/get_last_transactions/{type}
+/api/test_net/v1/get_last_transactions
 [{
     &quot;vouts&quot;: [
       {
@@ -1076,7 +1051,7 @@ from its hash_string, paginated.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_last_transactions_by_address/{hash_string}/{page}
+<pre><code class="elixir">/api/test_net/v1/get_last_transactions_by_address/{hash_string}/{page}
 [{
     &quot;vouts&quot;: [
       {
@@ -1157,7 +1132,7 @@ from its hash_string, paginated.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_nodes
+<pre><code class="elixir">/api/test_net/v1/get_nodes
 {
   &quot;urls&quot;: [
     &quot;http://seed1.cityofzion.io: 8080&quot;,
@@ -1187,7 +1162,7 @@ from its hash_string, paginated.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_transaction/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_transaction/{hash_string}
 {
   &quot;vouts&quot;: [
     {
@@ -1254,7 +1229,7 @@ from its hash_string, paginated.</p>
   Examples
 </h2>
 
-<pre><code class="elixir">/api/main_net/v1/get_unclaimed/{hash_string}
+<pre><code class="elixir">/api/test_net/v1/get_unclaimed/{hash_string}
 {
   &quot;unclaimed&quot;: float,
   &quot;address&quot;: &quot;hash_string&quot;
